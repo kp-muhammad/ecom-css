@@ -1,0 +1,834 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body{
+    background-color: var(--Tertiary-color);
+    width: 100vw;
+    overflow-x: hidden;
+}
+/* small icon */
+.logo-sm{
+    width: 20px;
+    height: 20px;
+    background-image: url('/assets/images/logo/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* navbar */
+nav{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 75px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    z-index: 2;
+}
+/* nav icon section */
+.nav-icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.nav-icon>img{
+    width: 24%;
+    height: 90%;
+}
+.nav-icon>span{
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.login-arrrow{
+    transform: rotate(90deg);
+}
+/* nav search section */
+.nav-search{
+    flex: 2;
+    background-color: var(--primary-color);
+    padding-block: 5px;
+    padding-inline: 3px;
+}
+.nav-search .search-box{
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 5px;
+}
+.search-box>input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: var(--secondary-color);
+    border: none;
+}
+.search-box>i{
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+/* nav options section */
+.nav-items{
+    flex: 3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.item-box1{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    gap: 4px;
+    position: relative;
+}
+
+.login-drop-down{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 45px;
+    left: 7px;
+    flex-direction: column;
+}
+.login-drop-down,
+.login-drop-down-head,
+.login-drop-down-item {
+    display: none;
+}
+
+.item-box1:hover .login-drop-down {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+.item-box1:hover .login-drop-down-head,
+.item-box1:hover .login-drop-down-item {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    padding-inline: 10px;
+    gap: 50px;
+    align-items: center;   
+}
+.login-drop-down-item:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.item-box2{
+    width: 100px;
+    height: 100%;
+    display: flex;
+}
+.item-box3{
+    width: 180px;
+    height: 100%;
+}
+.item-box4{
+    width: 35px;
+    height: 100%;
+    position: relative;
+}
+.menu-drop-down{
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+    background-color: var(--secondary-color);
+    right: 20px;
+}
+.item-box4:hover .menu-drop-down{
+    display: flex;
+}
+.menu-drop-item{
+    padding-inline: 20PX;
+    width: 100%;
+    height: 100%;
+}
+.menu-drop-item i{
+    margin-right: 8px;
+}
+.menu-drop-down .menu-drop-item:hover{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.item-box1,.item-box2,.item-box3,.item-box4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+a{
+    color: black;
+}
+
+/* category-box */
+.category-box{
+    border-radius: 3px;
+    width: 100%;
+    height: 40vh;
+    margin: auto;
+    display: flex;
+    padding-top: 110px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding-inline: 10px;
+    margin-bottom: 30px;
+}
+.box-item{
+    flex: 1;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;  
+}
+
+.box-item .box-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+.box-content-img img{
+     padding: 5px; 
+     height: 80px;
+     width: 120px;
+     background-color: var(--secondary-color);
+     border-radius: 10px;
+     object-fit: contain; 
+}
+.box-content-img img:hover{
+    box-shadow: rgba(248, 244, 244, 0.35) 0px 8px 15px;
+}
+.box-content .item-name{
+    flex: 1;
+    color: #fafafa;
+}
+/* hero section */
+.hero-section{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 20px;
+    padding-inline: 20px;
+    margin-bottom: 20px;
+}
+/* slider */
+.slider{
+    width: 100%;
+    height: 100%;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/assets/images/hero/hero4.jpg');
+    background-position: center;
+    background-repeat:  no-repeat;
+    background-size: cover;
+    border-radius: 8px 8px 8px 8px;
+
+}
+.left-arrow{
+    width: 3%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    background-color: var(--secondary-color);
+}
+.right-arrow{
+    width: 3%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    background-color: var(--secondary-color);  
+}
+
+.loader{
+    width: 100%;
+    height: 20%;
+    background-color: green;
+    border-radius: 0px 0px 8px 8px;
+}
+
+
+/* main  */
+main{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+/* section -1 */
+.section-1{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    gap: 10px;
+}
+.phone-card{
+    width: 80%;    
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.section-1-products{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--secondary-color);
+}
+.heading-section-product-card{
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-left: 20px;
+}
+.product-card{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10px;
+    padding-inline: 40px;
+}
+.product-card:hover{
+    background-color: var(--img-background);
+    color: #000;
+}
+.product-img{
+    width: 100%;
+    height: 60%;
+    padding-inline: 30px;
+}
+
+.phone-1{
+    background-image: url('/assets/images/product_img/smartphones/iqoo_12_5g.png');
+}
+.phone-2{
+    background-image: url('/assets/images/product_img/smartphones/nothing2a.png');
+}
+.phone-3{
+    background-image: url('/assets/images/product_img/smartphones/redmagic_10_pro.png');
+}
+.phone-4{
+    background-image: url('/assets/images/product_img/smartphones/rog_phone_8.png');
+}
+.phone-1,.phone-2,.phone-3,.phone-4{
+    background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.product-name{
+    width: 150px;
+    text-align: center;
+}
+.product-price{
+    width: 150px;
+    text-align: center;
+}
+.product-price{
+    font-weight: 600;
+}
+/* add card */
+.ad-card{
+    width: 20%;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.top{
+    display: flex;
+    color: var(--secondary-color);
+}
+.center img{
+    width: 200px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+/* section-2 */
+
+.section-2{
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+}
+.section-2-products{
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    display: flex;
+}
+
+
+
+.g-mouse{
+    background-image: url('/assets/images/product_img/gamming_gadgets/mouse1.png');
+}
+
+.g-headset{
+    background-image: url('/assets/images/product_img/gamming_gadgets/headset.png');
+}
+.g-console{
+    background-image: url('/assets/images/product_img/gamming_gadgets/controller.png');
+}
+.g-keyboard{
+    background-image: url('/assets/images/product_img/gamming_gadgets/keyboard.png');
+}
+.g-handheld{
+    background-image: url('/assets/images/product_img/gamming_gadgets/rog_allay.png');
+}
+.g-mouse,.g-headset,.g-console,.g-keyboard,.g-handheld{
+    background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* section -3 */
+.section-3{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 2px;
+    border-radius: 10px;
+}
+.offer-card{
+    width: 33%;
+    height: 200px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 10px 0px 0px 10px;
+}
+.offer-card:hover{
+        box-shadow: rgba(248, 244, 244, 0.35) 0px 8px 15px;
+}
+
+.offer-card-text{
+    width: 60%;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding-inline: 25px;
+    justify-content: center;
+    border-radius: 10px 0px 0px 10px
+}
+.offer-card-text div:nth-child(1){
+    font-size: 12px;
+    color: var(--secondary-color);
+}
+.offer-card-text div:nth-child(2)
+{
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+.offer-card-text div:nth-child(3)
+{
+    font-size: 18px;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.offer-card-img{
+    width: 40%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    align-items: center;
+}
+
+.card-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* section 4 */
+.section-4{
+    width: 100%;
+    height: 245px;
+    gap: 5px;
+    padding-inline: 10px;
+    border-radius: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-block: 30px;
+}
+.product-continer-4{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    gap: 10px;
+}
+.offer-card>.card-top{
+    width: 100%;
+    height: 80%;
+    background-color: var(--secondary-color);
+    display: flex;
+    padding: 5px;
+}
+.card-top .card-top-left{
+    width: 60%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-inline: 20px;
+}
+#brand-icon-1{
+    background-image: url('/assets/images/section-4/brand-logo/apple_logo.png');
+}
+#brand-icon-2{
+    background-image: url('/assets/images/section-4/brand-logo/lenovo_logo.png');
+}
+#brand-icon-3{
+    background-image: url('/assets/images/section-4/brand-logo/nviedia_logo.png');
+    background-color: #fafafa;
+}
+.offer-card-brand-icon{
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.card-top .card-top-right{
+    width: 40%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--img-background);
+}
+/*  */
+#brand-img-1{
+    background-image: url('/assets/images/section-4/product-img/apple-removebg-preview.png');    
+} 
+#brand-img-2{
+    background-image: url('/assets/images/section-4/product-img/lenovo-removebg-preview.png');
+}
+#brand-img-3{
+    background-image: url('/assets/images/section-4/product-img/nvidia-rtx.png');
+} 
+/*  */
+.offer-card-brand-text{
+    width: 100%;
+    padding-inline: 20px;
+}
+.offer-card-brand-text div:first-child{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* SECTION-5 */
+.section-5{
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 50px; /*temp*/
+    display: flex;
+    border: 1px solid white;
+}
+.section-5 .card-1{
+    flex: 1;
+    height: 100%;
+    background-color: var(--img-background);
+}
+.section-5 .card-2{
+    flex: 1;
+    height: 100%;
+    background-color: var(--img-background);
+}
+.card-1,.card-2{
+    display: flex;
+    flex-direction: column;
+
+}
+.heading{
+    width: 100%;
+    height:10%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+    align-items: center;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.cube{
+    width: 40%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    gap: 15px;
+}
+.cube .img{
+    height: 80%;
+    width: 100%;
+    background-color: var(--secondary-color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+#cube-img-1{
+   background-image: url('/assets/images/section-5/headphone_deals/earbuds1-removebg-preview.png'); 
+}
+#cube-img-2{
+   background-image: url('/assets/images/section-5/headphone_deals/headphone_wired.png'); 
+}
+#cube-img-3{
+   background-image: url('/assets/images/section-5/headphone_deals/headset.png'); 
+}
+#cube-img-4{
+   background-image: url('/assets/images/section-5/headphone_deals/neckbands.png'); 
+}
+#cube-img-5{
+   background-image: url('/assets/images/section-5/speakers_deals/marshall-preminum.png'); 
+}
+#cube-img-6{
+   background-image: url('/assets/images/section-5/speakers_deals/sony-Home_Theatre.png'); 
+}
+#cube-img-7{
+   background-image: url('/assets/images/section-5/speakers_deals/wirlesss_speaker.png'); 
+}
+#cube-img-8{
+   background-image: url('/assets/images/section-5/speakers_deals/trolly_speaker-removebg-preview.png'); 
+}
+.cube .price{
+    width: 100%;
+    height: 20%;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.section-5 .card-3{
+    flex: 1;
+    height: 100%;
+    background-image: url('/assets/images/section-5/right_banner/playstation.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--secondary-color);
+    border: 1px solid black
+}
+.card-3-box{
+    margin: 60px;
+    font-size: 18px;
+    width: 200px;
+    height: 200px;
+}
+.card-3-box button{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Tertiary-color);
+    color: #fafafa;
+}
+/* section-6 */
+.section-6{
+    width: 100vw;
+    height: 200vh;
+    background-color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    padding: 20px;
+}
+.section-6 h4{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--Tertiary-color);
+}
+pre{
+    font-size: 14px;
+    color: var(--Tertiary-color);
+}
+
+/* footer */
+footer
+{
+width: 100%;
+height: 50vh;
+background-color: var(--secondary-color);
+}
+.footer-top{
+    width: 100%;
+    height: 40vh;
+    background-color: var(--primary-color);
+    display: flex;
+}
+.footer-top-left{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.footer-top-right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+.content1{
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+.content1-top{
+    width: 100%;
+    height: 70%;
+}
+.content-1-bottom{
+    width: 100%;
+    height: 20%;
+}
+
+.content2{
+    width: 50%;
+    height: 100%;
+     padding: 10px;
+}
+.list-1,.list-2,.list-3,.list-4{
+    flex: 1;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 20px;
+    padding-inline: 40px;
+}
+.list-head{
+    font-size: 14px;
+    color: #c0c0c0;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+.list-item{
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+.social-box{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social-box i{
+    color: var(--secondary-color);
+}
+
+.footer-bottum
+{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary-color);
+    border-top: 1px solid var(--img-background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-bottum ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    gap: 80px;
+    color: var(--secondary-color);
+}
+li i{
+    color: rgb(202, 177, 32);
+}
