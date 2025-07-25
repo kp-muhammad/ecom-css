@@ -261,7 +261,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('/assets/images/hero/hero4.jpg');
+    background-image: url('../images/hero/hero4.jpg');
     background-position: center;
     background-repeat:  no-repeat;
     background-size: cover;
@@ -352,16 +352,16 @@ main{
 }
 
 .phone-1{
-    background-image: url('/assets/images/product_img/smartphones/iqoo_12_5g.png');
+    background-image: url('../images/product_img/smartphones/iqoo_12_5g.png');
 }
 .phone-2{
-    background-image: url('/assets/images/product_img/smartphones/nothing2a.png');
+    background-image: url('../images/product_img/smartphones/nothing2a.png');
 }
 .phone-3{
-    background-image: url('/assets/images/product_img/smartphones/redmagic_10_pro.png');
+    background-image: url('../images/product_img/smartphones/redmagic_10_pro.png');
 }
 .phone-4{
-    background-image: url('/assets/images/product_img/smartphones/rog_phone_8.png');
+    background-image: url('../images/product_img/smartphones/rog_phone_8.png');
 }
 .phone-1,.phone-2,.phone-3,.phone-4{
     background-position: center;
@@ -422,20 +422,20 @@ main{
 
 
 .g-mouse{
-    background-image: url('/assets/images/product_img/gamming_gadgets/mouse1.png');
+    background-image: url('../images/product_img/gamming_gadgets/mouse1.png');
 }
 
 .g-headset{
-    background-image: url('/assets/images/product_img/gamming_gadgets/headset.png');
+    background-image: url('../images/product_img/gamming_gadgets/headset.png');
 }
 .g-console{
-    background-image: url('/assets/images/product_img/gamming_gadgets/controller.png');
+    background-image: url('../images/product_img/gamming_gadgets/controller.png');
 }
 .g-keyboard{
-    background-image: url('/assets/images/product_img/gamming_gadgets/keyboard.png');
+    background-image: url('../images/product_img/gamming_gadgets/keyboard.png');
 }
 .g-handheld{
-    background-image: url('/assets/images/product_img/gamming_gadgets/rog_allay.png');
+    background-image: url('../images/product_img/gamming_gadgets/rog_allay.png');
 }
 .g-mouse,.g-headset,.g-console,.g-keyboard,.g-handheld{
     background-position: center;
@@ -550,13 +550,13 @@ main{
     padding-inline: 20px;
 }
 #brand-icon-1{
-    background-image: url('/assets/images/section-4/brand-logo/apple_logo.png');
+    background-image: url('../images/section-4/brand-logo/apple_logo.png');
 }
 #brand-icon-2{
-    background-image: url('/assets/images/section-4/brand-logo/lenovo_logo.png');
+    background-image: url('../images/section-4/brand-logo/lenovo_logo.png');
 }
 #brand-icon-3{
-    background-image: url('/assets/images/section-4/brand-logo/nviedia_logo.png');
+    background-image: url('../images/section-4/brand-logo/nviedia_logo.png');
     background-color: #fafafa;
 }
 .offer-card-brand-icon{
@@ -577,13 +577,13 @@ main{
 }
 /*  */
 #brand-img-1{
-    background-image: url('/assets/images/section-4/product-img/apple-removebg-preview.png');    
+    background-image: url('../images/section-4/product-img/apple-removebg-preview.png');    
 } 
 #brand-img-2{
-    background-image: url('/assets/images/section-4/product-img/lenovo-removebg-preview.png');
+    background-image: url('../images/section-4/product-img/lenovo-removebg-preview.png');
 }
 #brand-img-3{
-    background-image: url('/assets/images/section-4/product-img/nvidia-rtx.png');
+    background-image: url('../images/section-4/product-img/nvidia-rtx.png');
 } 
 /*  */
 .offer-card-brand-text{
@@ -658,28 +658,28 @@ main{
 
 }
 #cube-img-1{
-   background-image: url('/assets/images/section-5/headphone_deals/earbuds1-removebg-preview.png'); 
+   background-image: url('../images/section-5/headphone_deals/earbuds1-removebg-preview.png'); 
 }
 #cube-img-2{
-   background-image: url('/assets/images/section-5/headphone_deals/headphone_wired.png'); 
+   background-image: url('../images/section-5/headphone_deals/headphone_wired.png'); 
 }
 #cube-img-3{
-   background-image: url('/assets/images/section-5/headphone_deals/headset.png'); 
+   background-image: url('../images/section-5/headphone_deals/headset.png'); 
 }
 #cube-img-4{
-   background-image: url('/assets/images/section-5/headphone_deals/neckbands.png'); 
+   background-image: url('../images/section-5/headphone_deals/neckbands.png'); 
 }
 #cube-img-5{
-   background-image: url('/assets/images/section-5/speakers_deals/marshall-preminum.png'); 
+   background-image: url('../images/section-5/speakers_deals/marshall-preminum.png'); 
 }
 #cube-img-6{
-   background-image: url('/assets/images/section-5/speakers_deals/sony-Home_Theatre.png'); 
+   background-image: url('../images/section-5/speakers_deals/sony-Home_Theatre.png'); 
 }
 #cube-img-7{
-   background-image: url('/assets/images/section-5/speakers_deals/wirlesss_speaker.png'); 
+   background-image: url('../images/section-5/speakers_deals/wirlesss_speaker.png'); 
 }
 #cube-img-8{
-   background-image: url('/assets/images/section-5/speakers_deals/trolly_speaker-removebg-preview.png'); 
+   background-image: url('../images/section-5/speakers_deals/trolly_speaker-removebg-preview.png'); 
 }
 .cube .price{
     width: 100%;
@@ -694,7 +694,7 @@ main{
 .section-5 .card-3{
     flex: 1;
     height: 100%;
-    background-image: url('/assets/images/section-5/right_banner/playstation.png');
+    background-image: url('../images/section-5/right_banner/playstation.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
